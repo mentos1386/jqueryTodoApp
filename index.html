@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<title>Some TODO App</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style-modules.css">
+<link rel="stylesheet" type="text/css" href="style-header.css">
+<link rel="stylesheet" type="text/css" href="style-content.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<header>
+    <h3 class="header-title">Some TODO App</h3>
+    <nav>
+        <a href="https://github.com/mentos1386/jqueryTodoApp">Github</a>
+        <a href="https://ucilnica.fri.uni-lj.si/mod/assign/view.php?id=13878">University Project Page</a>
+        <button id="showCompleted">Show Completed</button>
+    </nav>
+</header>
+
+<div class="content" id="mainContent">
+    <section class="form">
+        <header>
+            <h3>Create new Category</h3>
+        </header>
+        <form id="createNewCategory">
+            <label for="newCategory">Category name</label>
+            <input id="newCategory" type="text" name="categoryName">
+        </form>
+    </section>
+    <section class="fill"></section>
+</div>
+
+<!-- Add scripts bellow -->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script
+        src="script.js"
+        crossorigin="anonymous"></script>
+</body>

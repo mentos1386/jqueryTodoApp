@@ -1,0 +1,23 @@
+/**
+BUTTON
+*/
+button {
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    padding: .75em 1.5em;
+    text-align: center;
+    transition: background-color 150ms ease, color 150ms ease;
+    user-select: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: rgba(158,158,158,.2);
+}

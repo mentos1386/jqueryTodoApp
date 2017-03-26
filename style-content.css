@@ -1,0 +1,159 @@
+/**
+CONTENT
+*/
+
+.content {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.content section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  flex: 10 0 auto;
+  margin: 1rem;
+}
+
+
+
+.content section:first-child {
+  border-left: 1rem solid transparent;
+  margin-left: 0;
+}
+
+/**
+ * HEADER
+ */
+
+.content section header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content section header h3 {
+  margin: 0;
+  color: white;
+  font-weight: 300;
+}
+
+.content section header small {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/**
+ * LIST
+ */
+
+.content section.form {
+  order: 1000000000;
+  border-right: 1rem solid transparent;
+}
+
+.content section.fill {
+  order: 1000000001;
+  flex: 10000000;
+}
+
+.content section.form form,
+.content section .list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.content section .list .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  padding: 1rem 0.5rem 1rem 2rem;
+  border-bottom: 1px dashed #BDBDBD;
+}
+
+/*
+ * Toggle between showing and hiding done
+ */
+.content .list .item.done {
+  display: none;
+  background: #66BB6A;
+}
+
+.showCompleted .content .list .item.done {
+  display: flex;
+}
+
+.content section .list .item:last-child {
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+
+.content section .list .item.newTask {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.content section .list .item p {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  flex: 1;
+}
+
+.content section .list .item .options {
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+
+.content section .list .item:not(.done):hover .options {
+  display: flex;
+}
+
+.content section .list .item .options button {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/**
+ * New Category Form
+ */
+
+.content section.form form {
+  background: white;
+  padding: 1rem;
+}
+
+.content section.form form label {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.8rem;
+}
+
+.content section.form form input {
+  border: 0;
+  border-bottom: 1px solid #BDBDBD;
+  height: 2rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 576px) {
+  .content section {
+    width: 33%;
+  }
+}
+
+@media (min-width: 768px) {
+  .content section {
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .content section {
+    width: 20%;
+  }
+}

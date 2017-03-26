@@ -1,0 +1,63 @@
+/*
+HEADER
+ */
+
+body > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #1976D2;
+    padding: 1rem;
+}
+
+body > header .header-title {
+    color: white;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 1rem;
+}
+
+body > header nav {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+body > header nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    align-self: center;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+body > header nav a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+body > header nav button {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body > header nav button:hover {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    body > header {
+        flex-direction: row;
+    }
+
+    body > header .header-title{
+        flex-direction: row;
+        margin: 0;
+        text-align: start;
+    }
+
+    body > header nav {
+        flex-direction: row;
+    }
+}
