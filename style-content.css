@@ -41,6 +41,7 @@ CONTENT
 }
 
 .content section header small {
+  align-self: center;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -108,11 +109,21 @@ CONTENT
 .content section .list .item .options {
   flex-direction: column;
   justify-content: center;
-  display: none;
+  visibility: hidden;
+}
+
+.content section .list .item:not(.done) .options {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .content section .list .item:not(.done) .options {
+    visibility: hidden;
+  }
 }
 
 .content section .list .item:not(.done):hover .options {
-  display: flex;
+  visibility: visible;
 }
 
 .content section .list .item .options button {
@@ -142,13 +153,13 @@ CONTENT
 
 @media (min-width: 576px) {
   .content section {
-    width: 33%;
+    width: 45%;
   }
 }
 
 @media (min-width: 768px) {
   .content section {
-    width: 25%;
+    width: 35%;
   }
 }
 
